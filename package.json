@@ -1,0 +1,52 @@
+{
+  "name": "noderestapi",
+  "version": "1.0.0",
+  "description": "create noderestapi",
+  "main": "app.js",
+  "scripts": {
+    "start": "export NODE_ENV=development&& nodemon app.js",
+    "start:staging": "export NODE_ENV=staging&& nodemon -L app.js",
+    "start:prod": "export NODE_ENV=production&& nodemon -L app.js",
+    "nodemon": "nodemon app.js",
+    "serve": "nodemon app.js",
+    "dev": "nodemon -L app.js"
+  },
+  "author": "S MuthuKumar",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/joi": "^15.0.3",
+    "atob": "^2.1.2",
+    "base64-to-image": "^1.0.2",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.18.3",
+    "btoa-atob": "^0.1.2",
+    "cors": "^2.8.5",
+    "custom-env": "^2.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.1",
+    "express-joi-validation": "^5.0.0",
+    "jest": "^27.0.6",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.4.15",
+    "mongoose-fuzzy-searching": "^2.0.2",
+    "multer": "^1.4.2",
+    "mysql": "github:felixge/node-mysql",
+    "mysql2": "^1.6.5",
+    "node-blob": "0.0.2",
+    "node-cron": "^2.0.3",
+    "path": "^0.12.7",
+    "pg": "^7.8.1",
+    "sanitize-filename": "^1.6.3",
+    "sequelize": "^4.42.0",
+    "ssh2-sftp-client": "^7.0.4",
+    "tmp": "^0.2.1",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "sequelize-cli": "^6.2.0"
+  }
+}

@@ -1,0 +1,20 @@
+name: remote ssh command
+on:
+  push:
+    branches: [ sachin_work ]
+jobs:
+
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        script: |
+          cd thread/express-mail-box-api/
+          git pull origin sachin_work
+          pm2 restart 3
